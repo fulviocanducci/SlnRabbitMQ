@@ -8,8 +8,8 @@ namespace CslAppSendMessageRabbitMQ
    {
       static void Main(string[] args)
       {
-         ConnectionFactory factory = new ConnectionFactory() { HostName = "localhost" };
-         using (IConnection? connection = factory.CreateConnection())
+         ConnectionFactory factory = new ConnectionFactory() { HostName = "164.92.98.22", UserName = "guest", Password = "guest" };
+         using (IConnection connection = factory.CreateConnection())
          using (IModel channel = connection.CreateModel())
          {
             channel.QueueDeclare(queue: "message", durable: false, exclusive: false, autoDelete: false, arguments: null);

@@ -8,7 +8,7 @@ namespace CslAppReceiveMessageRabbitMQ
    {
       static void Main(string[] args)
       {
-         ConnectionFactory factory = new ConnectionFactory() { HostName = "localhost" };
+         ConnectionFactory factory = new ConnectionFactory() { HostName = "164.92.98.22" };
          using (var connection = factory.CreateConnection())
          using (var channel = connection.CreateModel())
          {
